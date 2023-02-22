@@ -9,7 +9,20 @@
 /* цвет кнопок подменю фон hover  #404BBF;*/
 /* цвет фона под белій текст:#2E2F42; */
 /* цвет фона HERO #2E2F42 */
+/* Для сокрытия текста(заголовков) */
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 :root {
     --background-color-pages:#FFFFFF; ; 
     --first-font-family: "Roboto",
@@ -30,6 +43,7 @@
 /* COMMON SET */
 
 body {
+
     background-color: var(--background-color-pages);
     color: var(--first-color-text);
     font-family: "Roboto", sans-serif;
@@ -37,12 +51,27 @@ body {
     letter-spacing: 0.02em;
 }
 
+h1,h2,h3,h4,h5,h6,p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul,ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+button {
+    cursor: pointer;
+}
+img {
+    display: block;
+}
 .list {
     list-style: none;        
 }
  
-.background-footer {
-background-color: var(--background-color-footer);
+.link {
+    text-decoration: none;
 }
 /* LOGO */
 .color-logo-web {
@@ -102,12 +131,15 @@ font-family: Raleway;
 .btn-order:focus {
     background-color: #404BBF;;
 }
-
+/* ******** HEADER ******** */
+.header {
+    display: flex;
+}
 /* Site-nav + link */
 
 .site-nav .link {
     color: var(--first-color-text);
-    text-decoration: none;
+  
     font-size: 16px;
     line-height: 1.5;
 }
@@ -117,14 +149,12 @@ font-family: Raleway;
     color: var(--color-activation-nav);
 }
 
-.list .link {
-text-decoration: none;
-}
+
 
 /* contacts */
 .auth-nav .link {
     color: var(--second-color-text);
-    text-decoration: none;
+   
     
     font-weight: 400;
     font-size: 16px;
@@ -196,13 +226,6 @@ font-weight: 500;
     color:var(--second-color-text);
 }
 
-.text-footer {
-        font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #E7E9FC;
-    background-color: var(--background-color-whitetext);
-}
 
 /* СЕКЦИЯ 3 OUR TEAM */
 
@@ -210,16 +233,16 @@ font-weight: 500;
     background-color: #F4F4FD;;
 }
 
-/* Для сокрытия текста(заголовков) */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+
+/********** FOOTER *********/
+.background-footer {
+    background-color: var(--background-color-footer);
+}
+
+.text-footer {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #E7E9FC;
+    background-color: var(--background-color-whitetext);
 }
